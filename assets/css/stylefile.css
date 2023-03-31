@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: sans-serif;
+    outline: none;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: rgb(232, 226, 226);
+}
+nav{
+  height: 100px;
+  background: rgb(18, 121, 247);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100000;
+
+}
+nav .main_pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .main_pages a{
+    height: 100px;
+    text-decoration: none;
+    font-family: Arial;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    color: white;
+    display: flex;
+    width: 150px;
+    justify-content: center;
+    margin-top:-35px;
+    
+}
+.main_pages a:hover{
+  text-decoration: underline; 
+  font-size: 20px;
+}
+.logo img{
+    margin-top: 9px;
+    margin-left: 80px;
+}
+label, #toggle{
+    display: none;
+}
+@media all and (max-width:991px){
+    .logo img{
+       margin-left:19px;
+    }
+    nav{
+        height: 100px;
+    }
+    nav .main_pages a{
+        margin-top:15px;
+        font-size: 15px;
+        color:white;
+    }
+    nav .main_pages{
+        display: none;
+        flex-direction: column;
+        background: hsla(240, 3%, 6%, 0.439);
+        height: 220px;
+    }
+    nav .main_pages a{
+        width: 50%;
+    }
+    .btn_toggle{
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        margin: 0 auto;
+        font-size:20px;
+        color: white;
+        cursor: pointer;
+        margin-top: -20px;
+        margin-right: 33px;
+        border: solid rgb(0, 0, 0, 0.3) 1px;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.3);
+        
+
+    }
+    #toggle:checked + .main_pages{
+        display: flex;
+        
+    }
+   
+}
+
+/*
+ HOME PAGE
+ -products section 
+ - Services secton 
+
+*/
+.products{
+    margin: 2rem 6%;
+    margin-top: 110px;
+    
+}
+
+.products .heading{
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    border-left: 7px solid rgb(18, 121, 247);
+    padding-left: 7px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+
+
+}
+.product_info{
+    flex: 1 1 250px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px 10px;
+    cursor: pointer;
+    max-width: 300px;
+    transition: all 0.3s;
+    background: white;
+    border-radius: 15px;
+    border: 1px solid rgb(18, 121, 247);
+    box-shadow: rgb(152, 151, 151) 2px 5px 11px;
+
+
+}
+.resum_img{
+ justify-content: center;
+ position: relative;
+}
+#img_product img{
+    margin-right: 15px;
+    text-align: center;
+
+}
+#img_name{
+    color:rgb(18, 121, 247);
+    font-family: Arial,Bold;
+    font-size: 20px;
+}
+#descrip_img{
+    margin-top: 24px;
+    border-left:2px solid rgb(18, 121, 247);
+    border-right:2px solid rgb(18, 121, 247);
+    justify-content: center;
+
+}
+#product_btn{
+    margin-top: 35px;
+    margin-left: 15px;
+}
+.btn{
+    padding:5px;
+    margin-top: 14px;
+    background-color:rgb(18, 121, 247);
+    color: white;
+    text-align: center;
+    width: 150px;
+    border: solid rgb(18, 121, 247);
+    border-radius: 4px;
+    box-shadow: rgb(152, 151, 151) 2px 5px 11px;
+    text-transform: uppercase;
+    font-family: Arial;
+}
+/* SERVICES SECTION */
+.container_service{
+    margin: 2rem 6%;
+    margin-top: 10px;
+}
+.services{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container_service .heading {
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    margin-bottom:3rem;
+    border-left: 7px solid rgb(212, 95, 40);
+    padding-left: 7px;
+}
+
+.container_service .services{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container_service .services .card{
+    width: 330px;
+    text-align: center;
+    background: #222;
+    padding: 20px 15px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container_service .services .card:hover{
+    background: chocolate;
+}
+
+.container_service .services .card .content{
+    transition: 0.3s;
+}
+
+.container_service .services .card:hover .content{
+    transform: scale(1.07);
+}
+
+.container_service .services .card .content .icon{
+    padding: 5px 0;
+    color: white;
+}
+
+.container_service .services .card .content .icon i{
+    font-size: 40px;
+}
+
+.container_service .services .card:hover .content .title{
+    color: white;
+}
+
+.container_service .services .card .content .title{
+    padding: 5px 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: chocolate;
+    transition: 0.3s;
+}
+
+.descript_service{
+    color: rgb(241, 229, 229);
+}
+/* MODAL FENETRE STYLE*/
+.btn_closeModal{
+    color: red;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 30px;
+    margin-left: 540px;
+    border: solid rgb(255, 255, 255) 2px;
+    border-radius: 5px;
+    background: rgb(80, 78, 78);
+
+}
+#dialog-title{
+    color: white;
+}
+#dialog-desc{
+    color: white;
+}
+/* dialog overlay*/
+.c-dialog {
+  margin-top: 70px;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  padding: 2.4rem;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  background-color: rgba(black, .75);
+  transition: .2s;
+}
+
+/* dialog box*/
+.c-dialog__box {
+
+  flex: 1;
+  max-width: 148rem;
+  max-height: max-content;
+  margin: auto;
+  padding: 2.4rem;
+  background-color: #00000087;
+}
+
+/* hidden dialog*/
+.c-dialog[aria-hidden="true"] {
+  visibility: hidden;
+  opacity: 0;
+}
+.division1{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.division2{
+    border: solid rgb(63, 169, 235) 2px;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: rgb(152, 151, 151) 0px 5px 11px;
+    background-color: white;
+
+}
+.inputy{
+    border: solid 1px rgb(63, 169, 235);
+    border-radius: 4px;
+    padding: 10px;
+    width: 220px;
+    background-color: white;
+}
+.btnn{
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    display: flex;
+    width: 220px;
+    border: solid blue 1px;
+    border-radius: 4px;
+    box-shadow: rgb(152, 151, 151) 2px 5px 11px;
+    text-transform: uppercase;
+    font-family: Arial;
+}
+.btnn:hover{
+    background-color: rgb(63, 169, 235);
+}
+.lab{
+    color:black;
+}
+.pagination{
+    color: blue;
+    margin-left: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+
+}
+
